@@ -70,6 +70,7 @@ svg {
     align-items: center;
     justify-content: space-evenly;
     gap: 10px;
+    padding: 10px;
 }
 .frame7{
     
@@ -121,7 +122,7 @@ padding: 0px;
     flex-direction: row;
     justify-content: end;
     align-items: center;
-    /* gap: 150px; */
+    
 }
 .frame2{
     display: flex;
@@ -132,6 +133,32 @@ padding: 0px;
     height: 27px;
     font-size: 17px;
 }
+
+.shipping-slider {
+  width: 300px; 
+  overflow: hidden;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.shipping-slider .shipping-slide {
+  display: inline-block;
+  padding: 4px 20px;
+  font-weight: bold;
+  font-size: 18px;
+  animation: slideShipping 9s linear infinite;
+  color:white;
+  
+  align-items: center;
+}
+
+@keyframes slideShipping {
+  0%   { transform: translateX(100%); }
+  33%  { transform: translateX(0%); }
+  66%  { transform: translateX(-100%); }
+  100% { transform: translateX(-200%); }  
+} 
+
 
 p{
     color: white;
@@ -324,8 +351,7 @@ top: 576.07px;
     font-weight: 400;
 }
 .mainheading button:hover{
-        transform: scale(1.2);
-    transition: transform 0.3s ease;
+     background-color: #555;
 }
 
 
@@ -463,6 +489,7 @@ background: #F6F9F1;
 
 .cards button:hover {
   background-color: #787676;
+  color: #eef7fe;
 }
 .musthaves{
     /* height: 1544px; */
@@ -470,6 +497,7 @@ background: #F6F9F1;
     background-color:#F6F9F1 ;
     position: relative;
     /* top:3127px ; */
+    padding-left: 30px;
     
 }
 .musthaves p{
@@ -489,7 +517,7 @@ background: #F6F9F1;
 #midi{
     height: 600px;
     width: 480px;
-    margin-left: 140px;
+    /* margin-left: 140px; */
 }
 .card h2{
     margin-top: 25px;
@@ -635,10 +663,9 @@ font-size: clamp(1.5rem, 4vw, 3rem);
     background-image: url(nextblog.png);
 }
 .cenblog{
-    /* height: 968px; */
-    /* width: 100%; */
-    display: flex
-;
+
+    display: flex;
+    padding-right: 20px;
     align-items: center;
     justify-content: center;
     background-color: #F6F9F1;
@@ -646,10 +673,9 @@ font-size: clamp(1.5rem, 4vw, 3rem);
     flex-grow: 1;
 }
 .cenblog img{
-    max-width: 50%;
+    max-width: 44%;
     flex: 0 0 50%;
-    /* height: 768px; */
-    /* width: 710px; */
+
 }
 .info{
     max-width: 50%;
@@ -724,6 +750,7 @@ font-size: clamp(1.5rem, 4vw, 3rem);
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 .placeholder input{
     width: 100%;
@@ -799,6 +826,7 @@ hr{
 }
 .menu img{
     margin-right: 10px;
+    margin-bottom: 10px;
     width: 195px;
 }
 .menu i:hover{
@@ -980,5 +1008,5 @@ hr{
   }
 }
 @media (max-width: 768px){
-  
+
 }
