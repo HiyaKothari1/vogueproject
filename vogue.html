@@ -13,27 +13,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Great+Vibes&family=Lavishly+Yours&family=Libertinus+Math&family=Limelight&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 </head>
 <body>
+    <script src="vogue.js"></script>
     <!-- top-header -->
     <section class="social-mediabar">
         <div class="container">
             <div class="row">
                 <div class="logo">
-                    <img src="x_logo.svg.png" id="x">
-                    <img src="Symbol.svg.png" id="f">
-                    <img src="insta.svg.png" id="i">
+                    <img src="images/x_logo.svg.png" id="x">
+                    <img src="images/Symbol.svg.png" id="f">
+                    <img src="images/insta.svg.png" id="i">
                 </div>
                 <div class="frame2">
-                    <img src="Group.png" class="grp">
-                    <div class="frame2">
+                    <img src="images/Group.png" class="grp">
+                    <div class="frame">
   <div class="shipping-slider">
     <div class="shipping-slide">Free shipping for members</div>
 
   </div>
 </div>
-                    <img src="Group.png" class="grp" id="right">
+                    <img src="images/Group.png" class="grp" id="right">
                 </div>
                 <div class="frame6">
                     <div class="frame5">
@@ -62,6 +62,10 @@
     <header class="navbar">
         <div class="container">
             <div class="row">
+                <div class="hamburger" onclick="toggleMenu()">
+  ☰
+</div>
+
                 <div class="frame13">
                     <div class="frame8" style="font-size: 20px;">Home</div>
                     <div class="frame8" style="font-size: 20px;">New Arrivals</div>
@@ -72,19 +76,19 @@
                 <div class="frame17">
                     <div class="frame14">
                         <div class="vector">
-                            <img src="Vector.png">
+                            <img src="images/Vector.png">
                         </div>
                         <div class="text">Store</div>
                     </div>
                     <div class="frame15">
                         <div class="vector">
-                            <img src="solar_cart-broken.png">
+                            <img src="images/solar_cart-broken.png">
                         </div>
                         <div class="text">My cart</div>
                     </div>
                     <div class="frame16">
                         <div class="vector">
-                            <img src="mdi_account.png">
+                            <img src="images/mdi_account.png">
                         </div>
                         <div class="text">Account</div>
                     </div>
@@ -196,7 +200,7 @@
         <p>Rs. 2,500</p>
     </div>
     <div>
-        <img src="model.png" id="blawhi">
+        <img src="images/model.png" id="blawhi">
     </div>
 </div>
 </section>
@@ -235,11 +239,11 @@
     <div>CHANNEL TIMELESS LOOKS AND CREATE AN UNFORGETTABLE IMPACT</div>
 </section>
 <section class="blog">
-    <div class="leftBlogcol">
+    
         <div class="blogContainer">
             <div class="prevblog"><h1>Previous Blog</h1></div>
             <div class="cenblog">
-                <img src="cenblog.png">
+                <img src="images/cenblog.png">
                 <div class="info">
                     <p>10 Feb 2025</p>
                     <h5>Elevate your wardrobe with women's
@@ -250,7 +254,7 @@
             </div>
         </div>
     </div>
-    <div class="nextblog"></div>
+    <div class="nextblog"><h1>Next Blog</h1></div>
 </section>
 <!-- section channel closed -->
  <!-- section testimonials -->
@@ -260,7 +264,7 @@
             <h3>Testimonials</h3>
             
             <span>As a fashion icon, Rihanna's interviews in Vogue are full of deep thoughts about her personal style. Her testimony on fashion includes how she sees clothes as an expression of confidence and how she empowers people through her work with her brand, Fenty.</span>
-            <img src="ellipse.png">
+            <img src="images/ellipse.png">
             <h6>Caroline Mikaelson</h6>
             <p>Fashion Designer</p>
         </div>
@@ -304,7 +308,7 @@
                 <div class="menu">
                     <h3>Available on</h3>
                     
-            <p><img src="play.png"><img src="apple.png"></p>
+            <p><img src="images/play.png"><img src="images/apple.png"></p>
             
             <p>Join Us</p>
             <i class="fa-brands fa-youtube"></i>
@@ -319,9 +323,51 @@
 </footer>
 
 <!-- footer-close -->
+<script>
+$('.testimonialslider').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
 
 
 
-
+</script>
+<script>
+  function toggleMenu() {
+    const frame13=document.querySelector('.frame13').classList.toggle('active');
+   const frame17=document.querySelector('.frame17').classList.toggle('active');
+  }
+</script>
 </body>
 </html>

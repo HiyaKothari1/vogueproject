@@ -4,6 +4,7 @@ body{
     /* height: 10258px; */
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
 }
 .container{
     max-width: 1440px;
@@ -145,8 +146,8 @@ padding: 0px;
   display: inline-block;
   padding: 4px 20px;
   font-weight: bold;
-  font-size: 18px;
-  animation: slideShipping 9s linear infinite;
+  font-size: 14px;
+  /* animation: slideShipping 9s linear infinite; */
   color:white;
   
   align-items: center;
@@ -300,7 +301,7 @@ height: 47px;
 .banner{
 width: 100%;
 height: 875px;
-background-image: url(Banner.png);
+background-image: url(images/Banner.png);
 background-size: cover;
 }
 .mainheading{
@@ -416,7 +417,7 @@ background: #F6F9F1;
  .fashion{
     width: 100%;
     padding: 50px;
-    background-image: url(image.png);
+    background-image: url(images/image.png);
     opacity: 1.9;
     background-size: cover;
     display: flex;
@@ -553,7 +554,7 @@ font-size: clamp(1.5rem, 4vw, 3rem);
 .catalog{
     width: 100%;
     top: 4871px;
-    background-image: url(backgrnd-img.png);
+    background-image: url(images/backgrnd-img.png);
     opacity: 1;
     background-size: cover;
     padding: 40px;
@@ -594,7 +595,7 @@ font-size: clamp(1.5rem, 4vw, 3rem);
     margin: 25px;
 }
 .channel{
-    background-image: url(backgroundd.png);
+    background-image: url(images/backgroundd.png);
     height: 1080px;
     width: 100%;
     /* position: absolute; */
@@ -632,7 +633,7 @@ font-size: clamp(1.5rem, 4vw, 3rem);
     /* margin: auto; */
 }
 .prevblog,.nextblog{
-  padding: 50px;
+  padding: 35px;
   align-items: center;
 }
 .prevblog h1, .nextblog h1{
@@ -744,7 +745,7 @@ font-size: clamp(1.5rem, 4vw, 3rem);
   border-radius: 50%;
   margin-top: 20px;
   position: relative;
-  left:44%;
+ 
   
 }
 
@@ -788,7 +789,7 @@ font-size: clamp(1.5rem, 4vw, 3rem);
 .footer{
     position: relative;
     width: 100%;
-    background-image: url(footer.png);
+    background-image: url(images/footer.png);
     background-size: cover;
     opacity: 1;
     display: flex;
@@ -934,7 +935,7 @@ hr{
         transform: scale(1.06);
     transition: transform 0.3s ease;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1204px) {
   .frame7,
   .frame6,
   .row,
@@ -1136,3 +1137,83 @@ hr{
   }
 }
 
+/* Hide hamburger by default */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .frame13 , .frame17{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white; /* or your background */
+    position: absolute;
+    top: 60px; /* Adjust depending on navbar height */
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 100;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+  }
+
+ .frame13.active {
+    display: flex;
+    background-color:rgba(0,0,0,0.1);
+    width: 40%;
+    
+  }
+
+}
+@media (max-width:685px)
+{
+  .shipping-slider{
+    width: 200px;
+  }
+  .shipping-slide{
+    font-size: 15px;
+
+  }
+  .frame2{
+    gap: 10px;
+  }
+  .frame4{
+    display: none;
+  }
+  .frame{
+    width: 200px;
+  }
+   .cat {
+    display: flex;
+    flex-direction: column;
+  }
+  .prevblog h1 , .nextblog h1{
+    font-size: 50px;
+  }
+}
+@media (max-width: 576px){
+  .cat {
+    display: flex;
+    flex-direction: column;
+  }
+  #blawhi{
+    display: none;
+  }
+    .prevblog h1 , .nextblog h1{
+    font-size: 40px;
+  }
+}
+@media (max-width: 576px){
+  .frame5{
+    display: none;
+  }
+}
