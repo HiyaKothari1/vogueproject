@@ -134,31 +134,35 @@ padding: 0px;
     height: 27px;
     font-size: 17px;
 }
-
-.shipping-slider {
-  width: 300px; 
-  overflow: hidden;
-  white-space: nowrap;
+.slider-banner {
+  display: flex;
   align-items: center;
-}
-
-.shipping-slider .shipping-slide {
-  display: inline-block;
-  padding: 4px 20px;
-  font-weight: bold;
-  font-size: 14px;
-  /* animation: slideShipping 9s linear infinite; */
-  color:white;
+  justify-content: center;
+  background-color:#1e1e1e;
+  color: white;
+  padding: 15px;
   
-  align-items: center;
 }
 
-@keyframes slideShipping {
-  0%   { transform: translateX(100%); }
-  33%  { transform: translateX(0%); }
-  66%  { transform: translateX(-100%); }
-  100% { transform: translateX(-200%); }  
-} 
+.arrow {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 20px;
+  transition: color 0.3s;
+}
+
+.arrow:hover {
+  color: #ccc;
+}
+
+.slider-message {
+  text-align: center;
+  font-size: 17px;
+}
+
 
 
 p{
@@ -550,6 +554,7 @@ font-size: clamp(1.5rem, 4vw, 3rem);
 }
 #st{
     font-size: 40px;
+    text-align: center;
 }
 .catalog{
     width: 100%;
@@ -953,7 +958,7 @@ hr{
   }
 
   .vogue {
-    font-size: 60px;
+    font-size: 45px;
   }
 
   .mainheading {
@@ -1152,7 +1157,7 @@ hr{
     gap: 10px;
     background-color: white; /* or your background */
     position: absolute;
-    top: 60px; /* Adjust depending on navbar height */
+    top: 95px; /* Adjust depending on navbar height */
     left: 0;
     width: 100%;
     padding: 20px;
@@ -1162,14 +1167,15 @@ hr{
   .hamburger {
     display: block;
     position: absolute;
-    top: 15px;
+    top: 30px;
     left: 20px;
   }
 
  .frame13.active {
     display: flex;
-    background-color:rgba(0,0,0,0.1);
-    width: 40%;
+    background-color:rgba(0,0,0);
+    width: 100%;
+    color: #eef7fe;
     
   }
 
@@ -1209,9 +1215,10 @@ hr{
     .prevblog h1 , .nextblog h1{
     font-size: 40px;
   }
-}
-@media (max-width: 576px){
-  .frame5{
+    .frame5{
     display: none;
+  }
+  .prevblog,.nextblog{
+    padding: 10px;
   }
 }

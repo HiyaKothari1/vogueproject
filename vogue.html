@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Great+Vibes&family=Lavishly+Yours&family=Libertinus+Math&family=Limelight&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <script src="vogue.js"></script>
@@ -25,16 +26,14 @@
                     <img src="images/Symbol.svg.png" id="f">
                     <img src="images/insta.svg.png" id="i">
                 </div>
-                <div class="frame2">
-                    <img src="images/Group.png" class="grp">
-                    <div class="frame">
-  <div class="shipping-slider">
-    <div class="shipping-slide">Free shipping for members</div>
-
-  </div>
+               <div class="slider-banner">
+  <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
+  
+  <div class="slider-message" id="slider-text">Free shipping for members</div>
+  
+  <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
 </div>
-                    <img src="images/Group.png" class="grp" id="right">
-                </div>
+
                 <div class="frame6">
                     <div class="frame5">
                         <div class="frame3" style="font-size: 15px;">
@@ -354,9 +353,7 @@ $('.testimonialslider').slick({
         slidesToScroll: 1
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
+
   ]
 });
 
@@ -368,6 +365,22 @@ $('.testimonialslider').slick({
     const frame13=document.querySelector('.frame13').classList.toggle('active');
    const frame17=document.querySelector('.frame17').classList.toggle('active');
   }
+
+const messages = [
+  "Free shipping for members",
+  "New arrivals available now",
+  "Limited-time offer: 20% off",
+  "Join our loyalty program"
+];
+
+let currentIndex = 0;
+
+function changeSlide(direction) {
+  currentIndex = (currentIndex + direction + messages.length) % messages.length;
+  document.getElementById("slider-text").textContent = messages[currentIndex];
+} 
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
