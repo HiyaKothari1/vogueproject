@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 function reverseWords(sentence) {
 console.log(sentence.spli().reverse().join());
 }
 (reverseWords("hello world")); // Output: "olleh dlrow"
-=======
 
 $('.testimonialslider').slick({
   dots: true,
@@ -40,4 +38,3 @@ $('.testimonialslider').slick({
     // instead of a settings object
   ]
 });
->>>>>>> 6e188c9 (files added)
